@@ -5,6 +5,7 @@ A modern, responsive news aggregator built with React and Vite. Stay updated wit
 ## 🚀 Features
 
 - **Live News Feed**: Fetches real-time news articles using the NewsAPI.
+- **Dark & Light Mode 🌗**: Seamlessly toggle between dark and light themes, remembering user preferences via `localStorage`.
 - **Category Filtering**: Brows news by categories (Business, Technology, Sports, etc.).
 - **Smart Filtering**: Automatically hides articles without images for a cleaner UI.
 - **Responsive Design**: Optimized for all devices using Tailwind CSS and DaisyUI.
