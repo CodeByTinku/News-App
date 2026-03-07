@@ -19,6 +19,11 @@ A modern, responsive news aggregator built with React and Vite. Stay updated wit
 - **HTTP Client**: [Axios](https://axios-http.com/)
 - **State Management**: React Context API
 
+---
+
+## Screenshot
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/0f605f5f-7a8e-4264-ab11-078be96cffe5" />
+
 ## 📦 Installation & Setup
 
 1. **Clone the repository**
