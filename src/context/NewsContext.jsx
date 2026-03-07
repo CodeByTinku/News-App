@@ -11,6 +11,7 @@ const NewsContextProvider = ({ children }) => {
 
     const [news, setNews] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
 
     const fetchNews = async (url="/everything?q=india") => {
         setLoading(true);
@@ -24,11 +25,19 @@ const NewsContextProvider = ({ children }) => {
         }
     }
 
+    const toggleTheme = () => {
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+    }
+
     const value = {
         news,
         setNews,
         fetchNews,
         loading,
+        theme,
+        toggleTheme,
     }
 
     return (

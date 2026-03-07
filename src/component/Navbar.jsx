@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 import Wrapper from "./Wrapper"
 import { useNewsContext } from "../context/NewsContext";
+import { BsCheckCircleFill, BsMoonFill, BsSunFill } from "react-icons/bs";
 
 const Navbar = ({ className }) => {
 
-    const { setNews, fetchNews } = useNewsContext();
+    const { setNews, fetchNews, theme, toggleTheme } = useNewsContext();
 
     let timer = null;
     const searchNews = (e) => {
@@ -26,7 +27,11 @@ const Navbar = ({ className }) => {
                     <div className="flex-1">
                         <a className="btn btn-ghost text-xl">TD News</a>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 items-center">
+
+                        <button onClick={toggleTheme} className="btn btn-ghost btn-circle text-xl mr-2">
+                            {theme === "light" ? <BsMoonFill /> : <BsSunFill className="text-yellow-400" />}
+                        </button>
 
                         <input onChange={searchNews} type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
 
